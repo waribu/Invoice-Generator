@@ -6,7 +6,7 @@ var data = {
   client: {
     company: "Mr. Bean",
     address: "Blue Hut Building",
-    zip: "4000 CD",
+    zip: "00200",
     city: "Nairobi",
     country: "Kenya",
   },
@@ -15,7 +15,7 @@ var data = {
   sender: {
     company: "Ributech Computers",
     address: "Bihi Towers",
-    zip: "1234 AB",
+    zip: "12243",
     city: "Nairobi",
     country: "Kanya",
   },
@@ -40,6 +40,12 @@ var data = {
   // Now let's add some products! Calculations will be done automatically for you.
   products: [
     {
+      quantity: "1",
+      description: "HP monitors",
+      "tax-rate": 16,
+      price: 113.0,
+    },
+    {
       quantity: "2",
       description: "laptop screen",
       "tax-rate": 16,
@@ -53,10 +59,10 @@ var data = {
     },
   ],
 
-  // We will use bottomNotice to add a message of choice to the bottom of our invoice
-  bottomNotice: "Thank you for your Business!!",
+  // Use bottomNotice to add a message of choice to the bottom of our invoice
+  // bottomNotice: "Thank you for your Business!!",
 
-  // Here you can customize your invoice dimensions, currency, tax notation, and number formatting based on your locale
+  //invoice dimensions, currency, tax notation, and number formatting
   settings: {
     currency: "USD", // See documentation 'Locales and Currency' for more info. Leave empty for no currency.
 
@@ -71,15 +77,6 @@ var data = {
     height: "1000px", // allowed units: mm, cm, in, px
     width: "500px", // allowed units: mm, cm, in, px
     // orientation: "landscape", // portrait or landscape, defaults to portrait
-  },
-
-  /*
-      Customize enables you to provide your own templates.
-      Please review the documentation for instructions and examples.
-      Leave this option blank to use the default template
-   */
-  customize: {
-    // template: fs.readFileSync("template.html", "base64"), // Must be base64 encoded html
   },
 };
 easyinvoice.createInvoice(data, function (result) {
