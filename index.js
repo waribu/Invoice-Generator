@@ -20,14 +20,13 @@ var data = {
     country: "Kanya",
   },
 
-  // Of course we would like to use our own logo and/or background on this invoice. There are a few ways to do this.
+  // insert logo here and remember the png extension
   images: {
     //      Logo:
-    // 1.   Use a url
-    logo: "https://public.easyinvoice.cloud/img/logo_en_original.png",
+    logo: fs.readFileSync("logo.png", "base64"),
   },
 
-  // Let's add some standard invoice data, like invoice number, date and due-date
+  // add some standard invoice data, like invoice number, date and due-date
   information: {
     // Invoice number
     number: "2022.0561",
