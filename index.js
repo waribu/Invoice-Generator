@@ -41,19 +41,19 @@ var data = {
     {
       quantity: "1",
       description: "HP monitors",
-      "tax-rate": 16,
+      "tax-rate": 14,
       price: 113.0,
     },
     {
       quantity: "2",
       description: "laptop screen",
-      "tax-rate": 16,
+      "tax-rate": 14,
       price: 55.0,
     },
     {
       quantity: "4",
       description: "keyboard replacement",
-      "tax-rate": 16,
+      "tax-rate": 14,
       price: 25.0,
     },
   ],
@@ -63,10 +63,10 @@ var data = {
 
   //invoice dimensions, currency, tax notation, and number formatting
   settings: {
-    currency: "USD", // See documentation 'Locales and Currency' for more info. Leave empty for no currency.
+    currency: "usd", // See documentation 'Locales and Currency' for more info. Leave empty for no currency.
 
     locale: "en-US", // Defaults to en-US, used for number formatting (See documentation 'Locales and Currency')
-    "tax-notation": "vat", // Defaults to 'vat'
+    "tax-notation": "VAT", // Defaults to 'vat'
     // Using margin we can regulate how much white space we would like to have from the edges of our invoice
     "margin-top": 25, // Defaults to '25'
     "margin-right": 25, // Defaults to '25'
